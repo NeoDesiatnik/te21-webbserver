@@ -13,4 +13,8 @@ router.get('/menu', function (req, res) {
   res.render('menu.njk', { title: 'Los Pollos Hermanos Menu' })
 })
 
+router.get('/card', function (req, res) {
+  res.render('card.njk', { title: 'Julkort' })
+})
+
 module.exports = router

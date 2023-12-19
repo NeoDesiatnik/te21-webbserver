@@ -1,0 +1,22 @@
+{% extends "layout.njk" %}
+{% block content %}
+<main class="container">
+  <img src="/images/Los_Pollos.png" alt="logo">
+  <h2>Send a Christmas card!</h2>
+  <form action="/xmas" method="post">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" required>
+    <label for="greeting">Message: </label>
+    <input type="text" name="greeting" id="greeting" required>
+    <button type="submit">Send</button>
+  </form>
+
+<div class="card xmas">
+  <p>===================================</p>
+  <p>{{ greeting }}</p>
+  <p>From: {{ name }}</p>
+  <p>===================================</p>
+</div>
+
+</main>
+  {% endblock %}
